@@ -55,15 +55,15 @@ class Sidebar extends Component {
     return (
       <nav className="sidebar sidebar-offcanvas" id="sidebar">
         <div className="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a className="sidebar-brand brand-logo" href="index.html"><img src={require('../../assets/images/logo.svg')} alt="logo" /></a>
-          <a className="sidebar-brand brand-logo-mini" href="index.html"><img src={require('../../assets/images/logo-mini.svg')} alt="logo" /></a>
+          <a className="sidebar-brand brand-logo" href="index.html"><img src={require('../../assets/images/logo-mini.png')} alt="logo" /></a>
+          <a className="sidebar-brand brand-logo-mini" href="index.html"><img src={require('../../assets/images/logo.png')} alt="logo" /></a>
         </div>
         <ul className="nav">
           <li className="nav-item profile">
             <div className="profile-desc">
               <div className="profile-pic">
                 <div className="count-indicator">
-                  <img className="img-xs rounded-circle " src={require('../../assets/images/faces/face15.jpg')} alt="profile" />
+                  <img className="img-xs rounded-circle " src={require('../../assets/images/faces/akash.png')} alt="profile" />
                   <span className="count bg-success"></span>
                 </div>
                 <div className="profile-name">
@@ -138,22 +138,22 @@ class Sidebar extends Component {
             </Link>
           </li>
 
-          <li className={ this.isPathActive('/dashboard') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
-            <Link className="nav-link" to="/dashboard">
+          <li className={ this.isPathActive('/careerpath') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
+            <Link className="nav-link" to="/careerpath">
               <span className="menu-icon"><i className="mdi mdi-chair-school"></i></span>
               <span className="menu-title"><Trans>Career Path</Trans></span>
             </Link>
           </li>
 
-          <li className={ this.isPathActive('/dashboard') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
-            <Link className="nav-link" to="/dashboard">
+          <li className={ this.isPathActive('/notification') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
+            <Link className="nav-link" to="/notification">
               <span className="menu-icon"><i className="mdi mdi-bell"></i></span>
               <span className="menu-title"><Trans>Notifications</Trans></span>
             </Link>
           </li>
 
-          <li className={ this.isPathActive('/dashboard') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
-            <Link className="nav-link" to="/dashboard">
+          <li className={ this.isPathActive('/chat') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
+            <Link className="nav-link" to="/chat">
               <span className="menu-icon"><i className="mdi mdi-message-text"></i></span>
               <span className="menu-title"><Trans>Chat With Consultant</Trans></span>
             </Link>
