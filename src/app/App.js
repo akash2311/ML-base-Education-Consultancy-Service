@@ -8,7 +8,17 @@ import Footer from './shared/Footer';
 import { withTranslation } from "react-i18next";
 
 class App extends Component {
-  state = {}
+  state = {
+    apiResponse:"",
+  }
+  callAPI(){
+    fetch("http://localhost:9000/testAPI")
+    .then(res => res.text())
+    .then(res => this.setState({apResponse:res}))
+  }
+  componentWillMount(){
+   // this.callAPI();
+  }
   componentDidMount() {
     this.onRouteChanged();
   }
@@ -28,6 +38,7 @@ class App extends Component {
             { footerComponent }
           </div>
         </div>
+        <p>{this.state.apiResponse}</p>
       </div>
     );
   }
